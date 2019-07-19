@@ -1,0 +1,159 @@
+.navigation {
+    background-color: $color-blue;
+    color: $color-white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1848;
+    overflow-y: auto;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 600ms ease-in-out;
+    .accordion {
+        margin-bottom: $spacing / 2;
+        .accordion__item.active {
+            .accordion__toggle {
+                color: $color-cyan;
+                .icon {
+                    color: $color-cyan;
+                }
+            }
+        }
+    }
+    .navigation__bar {
+        border-bottom: 1px solid $color-white;
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+        @media screen and (min-width: $tablet-portrait-minwidth) {
+            padding-top: $spacing;
+        }
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        .form--search {
+            width: 100%;
+            order: 2;
+            margin-bottom: $spacing / 2;
+            .searchhints {
+                pointer-events: none;
+                .open-navigation & {
+                    pointer-events: auto;
+                }
+            }
+        } 
+        .button {
+            border-color: $color-white;
+            background-color: $color-transparent;
+        }
+        .buttongroup {
+            margin-bottom: 0!important;
+            .more {
+                color: $color-white;
+            }
+            order: 3;
+        }
+        .navigation__settings {
+            order: 1;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            .navigation__translate {
+                margin-bottom: 1.8em;
+            }
+            @media screen and (min-width: $tablet-landscape-minwidth) {
+                width: auto;
+                .navigation__translate {
+                    display: none;
+                }
+            }
+        }
+        .navigation__close {
+            margin-left: auto;
+            @media screen and (min-width: $tablet-landscape-minwidth) {
+                margin-bottom: 0;
+            }
+            .icon {
+                transform: rotate(-45deg);
+                transition: all 400ms ease-in-out;
+                transition-delay: 100ms;
+                color: $color-white;
+                .no-touch & {
+                    &:hover {
+                        color: $color-blue;
+                    }
+                }
+                &:focus {
+                    color: $color-blue;
+                }
+            }
+        }
+        @media screen and (min-width: $tablet-landscape-minwidth) {
+            flex-direction: row;
+            align-items: flex-start;
+            .form--search {
+                width: 28.92%;
+            }
+            .form--search, .buttongroup {
+                order: inherit;
+            }
+            .button {
+                &.button--circle {
+                    margin-left: inherit;
+                }
+            }
+        }
+    }
+}
+
+.no-js {
+    .navigation {
+        @media screen and (min-width: $desktop-small-width) {
+            opacity: 0;
+            pointer-events: auto;
+            position: relative;
+            height: auto;
+            animation: fadeNoJS 5s ease-in-out;
+            animation-fill-mode: forwards;
+            .navigation__close {
+                .icon {
+                    transform: rotate(0);
+                }
+            }
+        }
+        @media screen and(-webkit-min-device-pixel-ratio:0) { 
+            animation: none !important;
+        }
+    }
+}
+
+.open-navigation {
+    overflow: hidden;
+    .navigation {
+        opacity: 1;
+        pointer-events: auto;
+        .navigation__close {
+            .icon {
+                transform: rotate(0);
+            }
+        }
+    }
+    .container {
+        pointer-events: none;
+    }
+}
+
+@keyframes fadeNoJS {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

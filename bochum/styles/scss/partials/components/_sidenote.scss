@@ -1,0 +1,16 @@
+.sidenote {
+    @include h3;
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    @include spacing--top(0.5);
+    @media screen and (min-width: $desktop-medium-width) {
+        position: absolute;
+        left: 0;
+        transform: translateY(100%);
+        margin: -0.4em 0 0 0!important;
+        width: 15.31142%;
+        padding-left: 2.4rem;
+        text-align: left;
+    }
+}

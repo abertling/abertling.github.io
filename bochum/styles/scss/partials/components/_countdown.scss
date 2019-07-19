@@ -1,0 +1,70 @@
+.countdown {
+    margin-bottom: 1em;
+    text-align: center;
+    @media screen and (min-width: $tablet-landscape-minwidth) {
+        width: 100% / 864px * 680px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @media screen and (min-width: $desktop-medium-width) {
+        width: 100% / 1556px * 1080px;
+    }
+    @include spacing--top(2);
+    @include spacing--bottom(2);
+    h3 {
+        margin: 0!important;
+    }
+    .countdown__timer {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+        @media screen and (min-width: $tablet-landscape-minwidth) {
+            margin-top: $spacing;
+            margin-bottom: $spacing;
+            padding-top: $spacing * 1.5;
+            padding-bottom: $spacing * 1.5;
+        }
+        border-top: 0.1rem solid $color-yellow;
+        border-bottom: 0.1rem solid $color-yellow;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        .countdown__number {
+            font-weight: $font-weight-bold;
+            text-align: center;
+            line-height: 1;
+            .number__value {
+                display: block;
+                color: $color-blue;
+                font-size: 1.8rem;
+                margin-bottom: 0.2em;
+                @media screen and (min-width: $smartphone-landscape-width) {
+                    font-size: 3.0rem;
+                }
+                @media screen and (min-width: $tablet-landscape-minwidth) {
+                    font-size: 6.0rem;
+                }
+                @media screen and (min-width: $desktop-medium-width) {
+                    font-size: 8.0rem;
+                }
+            }
+            .number__description {
+                display: block;
+                color: $color-cyan;
+                font-size: 1.0rem;
+                @media screen and (min-width: $smartphone-landscape-width) {
+                    font-size: 1.5rem;
+                }
+                @media screen and (min-width: $tablet-landscape-minwidth) {
+                    font-size: 2.0rem;
+                }
+                @media screen and (min-width: $desktop-medium-width) {
+                    font-size: 2.0rem;
+                }
+            }
+        }
+    }
+}

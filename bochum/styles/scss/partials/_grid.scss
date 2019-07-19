@@ -1,0 +1,207 @@
+.inside {
+    width: 100%;
+    width: calc(100% - 3.2rem);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    box-sizing: content-box;
+    max-width: $max-width;
+    .inside {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+@media screen and (min-width: $smartphone-landscape-minwidth) {
+    // 480px
+    .inside {
+        width: 100% / $smartphone-landscape-minwidth * 332px;
+    }
+}
+@media screen and (min-width: $smartphone-landscape-width) {
+    // 568px
+    .inside {
+        width: 100% / $smartphone-landscape-width * 398px;
+    }
+}
+@media screen and (min-width: $smartphone-landscape-large-width) {
+    // 667px
+    .inside {
+        width: 100% / $smartphone-landscape-width * 472px;
+    }
+}
+@media screen and (min-width: $tablet-portrait-minwidth) {
+    // 768px => 720px - 959px 
+    .inside {
+        width: 100% / $tablet-portrait-width * 534px;
+        padding-left: 2.4rem;
+        padding-right: 2.4rem;
+    }
+}
+@media screen and (min-width: $tablet-landscape-minwidth) {
+    // 1024px => 960px - 1199px
+    .inside {
+        width: 100% / $tablet-landscape-width * 726px;
+    }
+}
+@media screen and (min-width: $tablet-landscape-maxwidth) {
+    // 1199px => 1199px
+    .inside {
+        width: 100% / $tablet-landscape-maxwidth * 860px;
+    }
+}
+@media screen and (min-width: $desktop-small-width) {
+    // 1200px => 1200px
+    .inside {
+        width: 100% / $desktop-small-width * 760px;
+    }
+}
+@media screen and (min-width: $desktop-medium-width) {
+    // 1440px => 1440px
+    .inside {
+        width: 100% / $desktop-medium-width * 802px;
+    }
+}
+@media screen and (min-width: $desktop-large-width) {
+    // 1920px => 1920px
+    .inside {
+        width: 100% / $desktop-large-width * 1082px;
+    }
+}
+.main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    .main__primary, .main__aside {
+        width: 100%;
+    }
+    .main__primary.main__primary--full {
+        width: 100%!important;
+        margin-right: auto!important;
+    }
+    .main__primary {
+        order: 2;
+        @media screen and (min-width: $desktop-medium-width) {
+            &:not(.main__primary--full) {
+                // 1440px
+                width: 100%;
+                width: 100% / 1156px * 802px;
+                padding-left: 0;
+                padding-right: 0;
+                margin-left: auto;
+                margin-right: 100% / 1156px * 177px;
+            }
+        }
+    }
+    .main__aside {
+        width: 100%;
+        @include spacing--top(0.75);
+        order: 1;
+        @media screen and (min-width: $desktop-medium-width) {
+            // 1440px
+            width: 100% / 1156px * 177px;
+            padding-left: 0;
+            padding-right: 0;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+    @media screen and (min-width: $desktop-medium-width) {
+        // 1440px
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 2.4rem;
+        padding-right: 2.4rem;
+        box-sizing: content-box;
+        width: 100% / $desktop-medium-width * 1156px;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: row;
+        max-width: $max-width;
+        .inside {
+            width: 100%;
+            max-width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+    @media screen and (min-width: $desktop-large-width) {
+        // 1920px
+        width: 100% / $desktop-large-width * $max-width;
+    }
+}
+.header__topbar, .header__title, .navigation__main, .header__breadcrumb, .header__shortcuts, .footer__main, .footer__menu, .main__primary.main__primary--full {
+    @media screen and (min-width: $smartphone-landscape-minwidth) {
+        // 480px
+        .inside {
+            width: calc(100% - 6.4rem);
+        }
+    }
+    @media screen and (min-width: $smartphone-landscape-width) {
+        // 568px
+        .inside {
+            width: calc(100% - 6.4rem);
+        }
+    }
+    @media screen and (min-width: $smartphone-landscape-large-width) {
+        // 667px
+        .inside {
+            width: calc(100% - 6.4rem);
+        }
+    }
+    @media screen and (min-width: $tablet-portrait-minwidth) {
+        // 768px => 720px - 959px 
+        .inside {
+            width: calc(100% - 9.6rem);
+            // padding-left: 2.4rem;
+            // padding-right: 2.4rem;
+        }
+    }
+    @media screen and (min-width: $tablet-landscape-minwidth) {
+        // 1024px => 960px - 1199px
+        .inside {
+            width: calc(100% - 9.6rem);
+        }
+    }
+    @media screen and (min-width: $tablet-landscape-maxwidth) {
+        // 1199px => 1199px
+        .inside {
+            width: calc(100% - 9.6rem);
+        }
+    }
+    @media screen and (min-width: $desktop-small-width) {
+        // 1200px => 1200px
+        .inside {
+            width: 100% / $desktop-small-width * 960px;
+        }
+    }
+    @media screen and (min-width: $desktop-medium-width) {
+        // 1440px => 1440px
+        .inside {
+            width: 100% / $desktop-medium-width * 1156px;
+        }
+    }
+    @media screen and (min-width: $desktop-large-width) {
+        // 1920px => 1920px
+        .inside {
+            width: 100% / $desktop-large-width * $max-width;
+        }
+    }
+}
+.main__primary--full {
+    @media screen and (min-width: $desktop-medium-width) {
+        // 1440px => 100%
+        .inside {
+            width: 100%!important;
+        }
+    }
+}

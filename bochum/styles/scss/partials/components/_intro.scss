@@ -1,0 +1,6 @@
+.intro {
+    @include spacing--bottom(0.5);
+    p {
+        @include text-intro1;
+    }
+}

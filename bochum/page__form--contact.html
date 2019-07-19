@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link href='styles/css/vendor.css' rel='stylesheet' type='text/css'>
+    <link href='styles/css/main.css' rel='stylesheet' type='text/css'>
+    <script src="scripts/dist/head.js"></script>
+    <title>Kontaktformular - Bochum.de</title>
+    <!--
+    <meta property="og:title" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <link rel="shortcut icon" type="image/x-icon" href="icons/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="icons/favicon.ico">
+    <link rel="icon" type="image/gif" href="icons/favicon.gif">
+    <link rel="icon" type="image/png" href="icons/favicon.png">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon-57x57.png" sizes="57x57">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon-60x60.png" sizes="60x60">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon-72x72.png" sizes="72x72">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon-76x76.png" sizes="76x76">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon-114x114.png" sizes="114x114">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon-120x120.png" sizes="120x120">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon-128x128.png" sizes="128x128">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon-144x144.png" sizes="144x144">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon-152x152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon-180x180.png" sizes="180x180">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon-precomposed.png">
+    <link rel="icon" type="image/png" href="icons/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="icons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="icons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="icons/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="icons/favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="icons/favicon-196x196.png" sizes="196x196">
+    <meta name="msapplication-TileImage" content="icons/win8-tile-144x144.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-navbutton-color" content="#ffffff">
+    <meta name="msapplication-square70x70logo" content="icons/win8-tile-70x70.png">
+    <meta name="msapplication-square144x144logo" content="icons/win8-tile-144x144.png">
+    <meta name="msapplication-square150x150logo" content="icons/win8-tile-150x150.png">
+    <meta name="msapplication-wide310x150logo" content="icons/win8-tile-310x150.png">
+    <meta name="msapplication-square310x310logo" content="icons/win8-tile-310x310.png">
+    <meta name="theme-color" content="#ffffff">
+    -->
+  </head>
+  <body class="no-js no-touch">
+    <div class="container">
+      <header class="header header--page" id="top">
+        <div class="header__main">
+          <div class="header__topbar">
+            <div class="inside">
+              <a class="header__logo" href="#">
+                <img class="header__logo__screen" src="styles/images/logo.svg" width="225" height="54" alt="Bochum">
+                <img class="header__logo__print" src="styles/images/logo--blue.svg" width="225" height="54" alt="Bochum">
+              </a>
+              <div class="header__translate">
+                <form class="form form--translate" target="_blank" name="input_form" action="//translate.google.de/translate">
+                  <div class="field field--translate">
+                    <label for="translateSelect"><span class="icon icon--custom"><svg><use xlink:href="#icon-earth" /></svg></span><span class="translateLangcode">de</span></label>
+                    <select title="Die Übersetzung öffnet sich in einem neuen Fenster bei Google Translate" name="translateSelect">
+                      <option value="de">Deutsch</option>
+                      <option value="af">Afrikaans</option>
+                      <option value="sq">Albanisch</option>
+                      <option value="am">Amharisch</option>
+                      <option value="ar">Arabisch</option>
+                      <option value="hy">Armenisch</option>
+                      <option value="az">Aserbaidschanisch</option>
+                      <option value="eu">Baskisch</option>
+                      <option value="bn">Bengalisch</option>
+                      <option value="my">Birmanisch</option>
+                      <option value="bs">Bosnisch</option>
+                      <option value="bg">Bulgarisch</option>
+                      <option value="ceb">Cebuano</option>
+                      <option value="ny">Chichewa</option>
+                      <option value="zh-TW">Chinesisch (traditionell)</option>
+                      <option value="zh-CN">Chinesisch (vereinfacht)</option>
+                      <option value="da">Dänisch</option>
+                      <option value="en">Englisch</option>
+                      <option value="eo">Esperanto</option>
+                      <option value="et">Estnisch</option>
+                      <option value="tl">Filipino</option>
+                      <option value="fi">Finnisch</option>
+                      <option value="fr">Französisch</option>
+                      <option value="fy">Friesisch</option>
+                      <option value="gl">Galizisch</option>
+                      <option value="ka">Georgisch</option>
+                      <option value="el">Griechisch</option>
+                      <option value="gu">Gujarati</option>
+                      <option value="ht">Haitianisch</option>
+                      <option value="ha">Hausa</option>
+                      <option value="haw">Hawaiisch</option>
+                      <option value="iw">Hebräisch</option>
+                      <option value="hi">Hindi</option>
+                      <option value="hmn">Hmong</option>
+                      <option value="ig">Igbo</option>
+                      <option value="id">Indonesisch</option>
+                      <option value="ga">Irisch</option>
+                      <option value="is">Isländisch</option>
+                      <option value="it">Italienisch</option>
+                      <option value="ja">Japanisch</option>
+                      <option value="jw">Javanisch</option>
+                      <option value="yi">Jiddisch</option>
+                      <option value="kn">Kannada</option>
+                      <option value="kk">Kasachisch</option>
+                      <option value="ca">Katalanisch</option>
+                      <option value="km">Khmer</option>
+                      <option value="ky">Kirgisisch</option>
+                      <option value="ko">Koreanisch</option>
+                      <option value="co">Korsisch</option>
+                      <option value="hr">Kroatisch</option>
+                      <option value="ku">Kurdisch (Kurmandschi)</option>
+                      <option value="lo">Lao</option>
+                      <option value="la">Lateinisch</option>
+                      <option value="lv">Lettisch</option>
+                      <option value="lt">Litauisch</option>
+                      <option value="lb">Luxemburgisch</option>
+                      <option value="mg">Malagasy</option>
+                      <option value="ml">Malayalam</option>
+                      <option value="ms">Malaysisch</option>
+                      <option value="mt">Maltesisch</option>
+                      <option value="mi">Maori</option>
+                      <option value="mr">Marathi</option>
+                      <option value="mk">Mazedonisch</option>
+                      <option value="mn">Mongolisch</option>
+                      <option value="ne">Nepalesisch</option>
+                      <option value="nl">Niederländisch</option>
+                      <option value="no">Norwegisch</option>
+                      <option value="ps">Paschtu</option>
+                      <option value="fa">Persisch</option>
+                      <option value="pl">Polnisch</option>
+                      <option value="pt">Portugiesisch</option>
+                      <option value="pa">Punjabi</option>
+                      <option value="ro">Rumänisch</option>
+                      <option value="ru">Russisch</option>
+                      <option value="sm">Samoanisch</option>
+                      <option value="gd">Schottisch-Gälisch</option>
+                      <option value="sv">Schwedisch</option>
+                      <option value="sr">Serbisch</option>
+                      <option value="st">Sesotho</option>
+                      <option value="sn">Shona</option>
+                      <option value="sd">Sindhi</option>
+                      <option value="si">Singhalesisch</option>
+                      <option value="sk">Slowakisch</option>
+                      <option value="sl">Slowenisch</option>
+                      <option value="so">Somali</option>
+                      <option value="es">Spanisch</option>
+                      <option value="sw">Suaheli</option>
+                      <option value="su">Sundanesisch</option>
+                      <option value="tg">Tadschikisch</option>
+                      <option value="ta">Tamil</option>
+                      <option value="te">Telugu</option>
+                      <option value="th">Thailändisch</option>
+                      <option value="cs">Tschechisch</option>
+                      <option value="tr">Türkisch</option>
+                      <option value="uk">Ukrainisch</option>
+                      <option value="hu">Ungarisch</option>
+                      <option value="ur">Urdu</option>
+                      <option value="uz">Usbekisch</option>
+                      <option value="vi">Vietnamesisch</option>
+                      <option value="cy">Walisisch</option>
+                      <option value="be">Weißrussisch</option>
+                      <option value="xh">Xhosa</option>
+                      <option value="yo">Yoruba</option>
+                      <option value="zu">Zulu</option>
+                    </select>
+                    <input type="hidden" value="_t" name="prev">
+                    <input type="hidden" value="en" name="hl" class="translateToLanguage">
+                    <input type="hidden" value="UTF-8" name="ie">
+                    <input type="hidden" value="1" name="layout">
+                    <input type="hidden" value="0" name="eotf">
+                    <input type="hidden" value="https://www.bochum.de" name="u" class="translateUrl">
+                    <input type="hidden" value="de" name="sl">
+                    <input type="submit" value="Übersetzen">
+                  </div>
+                </form>
+              </div>
+              <a href="#navigation" class="header__hamburger button button--circle" aria-label="Menü öffnen"><i class="icon icon--system" data-icon="menu"></i></a>
+            </div>
+          </div>
+          <div class="header__title">
+            <div class="inside">
+              <h1>Kontaktformular</h1>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <div class="main__primary">
+          <div class="text">
+            <div class="inside">
+              <form class="form">
+                <fieldset class="fieldset">
+                  <legend>Ihre Angaben</legend>
+                  <div class="fieldset__intro">
+                    <p>* Einträge in diesen Feldern sind erforderlich.</p>
+                  </div>
+                  <div class="radiobuttons">
+                    <span class="radiobuttons__label">Anrede*</span>
+                    <div class="field field--radio">
+                      <div class="radiobutton">
+                        <input id="radio-gender-female" name="radio-gender" type="radio" />
+                        <label for="radio-gender-female"><span class="radiobutton__text">Frau</span></label>
+                      </div>
+                    </div>
+                    <div class="field field--radio">
+                      <div class="radiobutton">
+                        <input id="radio-gender-male" name="radio-gender" type="radio" />
+                        <label for="radio-gender-male"><span class="radiobutton__text">Herr</span></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="field field--text">
+                    <input id="field-firstname" name="field-firstname" type="text" placeholder="Vorname" />
+                    <label for="field-firstname">Vorname*</label>
+                  </div>
+                  <div class="field field--text">
+                    <input id="field-lastname" name="field-lastname" type="text" placeholder="Nachname" />
+                    <label for="field-lastname">Nachname*</label>
+                  </div>
+                  <div class="field field--text">
+                    <input id="field-lastname" name="field-email" type="email" placeholder="E-Mail" />
+                    <label for="field-lastname">E-Mail*</label>
+                  </div>
+                  <div class="radiobuttons">
+                    <h5>Wünschen Sie eine Kopie Ihrer E-Mail? </h5>
+                    <div class="field field--radio">
+                      <div class="radiobutton">
+                        <input id="radio-copy-yes" name="radio-copy" type="radio" />
+                        <label for="radio-copy-yes"><span class="radiobutton__text">ja</span></label>
+                      </div>
+                    </div>
+                    <div class="field field--radio">
+                      <div class="radiobutton">
+                        <input id="radio-copy-no" name="radio-copy" type="radio" />
+                        <label for="radio-copy-no"><span class="radiobutton__text">nein</span></label>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+                <fieldset class="fieldset">
+                  <legend>Ihre Nachricht</legend>
+                  <div class="fieldset__intro">
+                    <p>* Einträge in diesen Feldern sind erforderlich.</p>
+                  </div>
+                  <div class="field field--text">
+                    <input id="field-subject" name="field-subject" type="text" placeholder="Betreff" />
+                    <label for="field-subject">Betreff*</label>
+                  </div>
+                  <div class="field field--textarea">
+                    <h5>Möchten Sie uns etwas mitteilen? Haben Sie Fragen?</h5>
+                    <textarea id="field-message" name="field-message" type="text" placeholder="Text eingeben"></textarea>
+                  </div>
+                  <div class="field field--checkbox">
+                    <div class="checkbox">
+                      <input id="checkbox-privacy" name="checkbox-privacy" type="checkbox" />
+                      <label for="checkbox-privacy"><span class="checkbox__icon"><i class="icon icon--system" data-icon="check"></i></span><span class="checkbox__text">Ich habe die <a href="#">Hinweise zum Datenschutz</a> gelesen und akzeptiere diese.</span></label>
+                    </div>
+                  </div>
+                </fieldset>
+                <div class="buttongroup buttongroup--right">
+                  <button href="tel:115" class="button button--outline ripple"><i class="icon icon--system" data-icon="close"></i> Eingaben löschen</button>
+                  <button href="#" class="button ripple" disabled><i class="icon icon--system icon--rotate45" data-icon="send"></i> Formular senden</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- START: footer -->
+      <footer class="footer">
+        <div class="footer__main">
+          <div class="inside">
+            <div class="footer__topbar">
+              <a class="footer__logo" href="#">
+                <img src="styles/images/logo.svg" width="225" height="54" alt="Bochum">
+              </a>
+              <ul class="footer__social">
+                <li class="footer__facebook"><a href="" aria-label="Facebook"><span class="icon icon--custom"><svg><use xlink:href="#icon-facebook" /></svg></span></a></li>
+                <li class="footer__twitter"><a href="" aria-label="Twitter"><span class="icon icon--custom"><svg><use xlink:href="#icon-twitter" /></svg></span></a></li>
+                <li class="footer__youtube"><a href="" aria-label="YouTube"><span class="icon icon--custom"><svg><use xlink:href="#icon-youtube" /></svg></span></a></li>
+                <li class="footer__instgram"><a href="" aria-label="Instagram"><span class="icon icon--custom"><svg><use xlink:href="#icon-instagram" /></svg></span></a></li>
+                <li class="footer__flickr"><a href="" aria-label="Flickr"><span class="icon icon--custom"><svg><use xlink:href="#icon-flickr" /></svg></span></a></li>
+              </ul>
+              <div class="footer__scrollup">
+                <a href="#top" aria-label="Zum Anfang springen"><i class="icon icon--system" data-icon="keyboard_arrow_up"></i></a>
+              </div>
+            </div>
+            <div class="buttongroup buttongroup--center">
+              <a href="tel:115" class="button"><i class="icon icon--system" data-icon="phone_in_talk"></i> 115 – Ihre Behördennummer</a>
+              <a href="#" class="button"><i class="icon icon--system" data-icon="chat"></i> Kontaktformular</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__menu">
+          <div class="inside">
+            <div class="menu">
+              <ul>
+                <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Stellenangebote</a></li>
+                <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Ausbildung</a></li>
+                <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Amtsblatt</a></li>
+                <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Presseservice</a></li>
+                <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Stadtpläne</a></li>
+                <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Mobilität / Parken</a></li>
+                <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Baustellen</a></li>
+                <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Zahlen / Fakten</a></li>
+                <li><a href="#" class="active"><i class="icon icon--system" data-icon="chevron_right"></i> Politik</a></li>
+                <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Bochum Strategie</a></li>
+                <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Haushalt</a></li>
+                <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Open Data</a></li>
+                <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Stadtteile</a></li>
+                <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Vielfalt</a></li>
+                <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Bochumer Geschichte</a></li>
+                <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Impressionen</a></li>
+                <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Impressum</a></li>
+                <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Datenschutz</a></li>
+                <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Newsletter/RSS</a></li>
+                <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Hilfe im Notfall</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- END: footer -->
+    </div>
+    <nav class="navigation" id="navigation">
+      <div class="navigation__main">
+        <div class="inside">
+          <div class="navigation__bar">
+            <form class="form form--search" role="search" autocomplete="off">
+              <div class="field field--search">
+                <label for="searchterm">Suchbegriff</label>
+                <input id="searchterm" name="searchterm" type="search" placeholder="Suchbegriff eingeben" />
+                <button class="form__button" type="submit" aria-label="Suchen"><i class="icon icon--system" data-icon="search"></i></button>
+              </div>
+              <div class="searchhints">
+                <h5>Häufig gesucht</h5>
+                <ul>
+                  <li><a href="">Führerschein</a></li>
+                  <li><a href="">Umzug</a></li>
+                  <li><a href="">Standesamt</a></li>
+                  <li><a href="">Elterngeld</a></li>
+                  <li><a href="">Öffnungszeiten</a></li>
+                </ul>
+              </div>
+            </form>
+            <div class="buttongroup buttongroup--center">
+              <a href="tel:115" class="button"><i class="icon icon--system" data-icon="phone_in_talk"></i> 115&nbsp;anrufen</a>
+              <a href="#" class="more">Mehr erfahren <i class="icon icon--system" data-icon="chevron_right"></i></a>
+            </div>
+            <div class="navigation__settings">
+              <div class="navigation__translate">
+                <form class="form form--translate" target="_blank" name="input_form" action="//translate.google.de/translate">
+                  <div class="field field--translate">
+                    <label for="translateSelect"><span class="icon icon--custom"><svg><use xlink:href="#icon-earth" /></svg></span><span class="translateLangcode">de</span></label>
+                    <select title="Die Übersetzung öffnet sich in einem neuen Fenster bei Google Translate" name="translateSelect">
+                      <option value="de">Deutsch</option>
+                      <option value="af">Afrikaans</option>
+                      <option value="sq">Albanisch</option>
+                      <option value="am">Amharisch</option>
+                      <option value="ar">Arabisch</option>
+                      <option value="hy">Armenisch</option>
+                      <option value="az">Aserbaidschanisch</option>
+                      <option value="eu">Baskisch</option>
+                      <option value="bn">Bengalisch</option>
+                      <option value="my">Birmanisch</option>
+                      <option value="bs">Bosnisch</option>
+                      <option value="bg">Bulgarisch</option>
+                      <option value="ceb">Cebuano</option>
+                      <option value="ny">Chichewa</option>
+                      <option value="zh-TW">Chinesisch (traditionell)</option>
+                      <option value="zh-CN">Chinesisch (vereinfacht)</option>
+                      <option value="da">Dänisch</option>
+                      <option value="en">Englisch</option>
+                      <option value="eo">Esperanto</option>
+                      <option value="et">Estnisch</option>
+                      <option value="tl">Filipino</option>
+                      <option value="fi">Finnisch</option>
+                      <option value="fr">Französisch</option>
+                      <option value="fy">Friesisch</option>
+                      <option value="gl">Galizisch</option>
+                      <option value="ka">Georgisch</option>
+                      <option value="el">Griechisch</option>
+                      <option value="gu">Gujarati</option>
+                      <option value="ht">Haitianisch</option>
+                      <option value="ha">Hausa</option>
+                      <option value="haw">Hawaiisch</option>
+                      <option value="iw">Hebräisch</option>
+                      <option value="hi">Hindi</option>
+                      <option value="hmn">Hmong</option>
+                      <option value="ig">Igbo</option>
+                      <option value="id">Indonesisch</option>
+                      <option value="ga">Irisch</option>
+                      <option value="is">Isländisch</option>
+                      <option value="it">Italienisch</option>
+                      <option value="ja">Japanisch</option>
+                      <option value="jw">Javanisch</option>
+                      <option value="yi">Jiddisch</option>
+                      <option value="kn">Kannada</option>
+                      <option value="kk">Kasachisch</option>
+                      <option value="ca">Katalanisch</option>
+                      <option value="km">Khmer</option>
+                      <option value="ky">Kirgisisch</option>
+                      <option value="ko">Koreanisch</option>
+                      <option value="co">Korsisch</option>
+                      <option value="hr">Kroatisch</option>
+                      <option value="ku">Kurdisch (Kurmandschi)</option>
+                      <option value="lo">Lao</option>
+                      <option value="la">Lateinisch</option>
+                      <option value="lv">Lettisch</option>
+                      <option value="lt">Litauisch</option>
+                      <option value="lb">Luxemburgisch</option>
+                      <option value="mg">Malagasy</option>
+                      <option value="ml">Malayalam</option>
+                      <option value="ms">Malaysisch</option>
+                      <option value="mt">Maltesisch</option>
+                      <option value="mi">Maori</option>
+                      <option value="mr">Marathi</option>
+                      <option value="mk">Mazedonisch</option>
+                      <option value="mn">Mongolisch</option>
+                      <option value="ne">Nepalesisch</option>
+                      <option value="nl">Niederländisch</option>
+                      <option value="no">Norwegisch</option>
+                      <option value="ps">Paschtu</option>
+                      <option value="fa">Persisch</option>
+                      <option value="pl">Polnisch</option>
+                      <option value="pt">Portugiesisch</option>
+                      <option value="pa">Punjabi</option>
+                      <option value="ro">Rumänisch</option>
+                      <option value="ru">Russisch</option>
+                      <option value="sm">Samoanisch</option>
+                      <option value="gd">Schottisch-Gälisch</option>
+                      <option value="sv">Schwedisch</option>
+                      <option value="sr">Serbisch</option>
+                      <option value="st">Sesotho</option>
+                      <option value="sn">Shona</option>
+                      <option value="sd">Sindhi</option>
+                      <option value="si">Singhalesisch</option>
+                      <option value="sk">Slowakisch</option>
+                      <option value="sl">Slowenisch</option>
+                      <option value="so">Somali</option>
+                      <option value="es">Spanisch</option>
+                      <option value="sw">Suaheli</option>
+                      <option value="su">Sundanesisch</option>
+                      <option value="tg">Tadschikisch</option>
+                      <option value="ta">Tamil</option>
+                      <option value="te">Telugu</option>
+                      <option value="th">Thailändisch</option>
+                      <option value="cs">Tschechisch</option>
+                      <option value="tr">Türkisch</option>
+                      <option value="uk">Ukrainisch</option>
+                      <option value="hu">Ungarisch</option>
+                      <option value="ur">Urdu</option>
+                      <option value="uz">Usbekisch</option>
+                      <option value="vi">Vietnamesisch</option>
+                      <option value="cy">Walisisch</option>
+                      <option value="be">Weißrussisch</option>
+                      <option value="xh">Xhosa</option>
+                      <option value="yo">Yoruba</option>
+                      <option value="zu">Zulu</option>
+                    </select>
+                    <input type="hidden" value="_t" name="prev">
+                    <input type="hidden" value="en" name="hl" class="translateToLanguage">
+                    <input type="hidden" value="UTF-8" name="ie">
+                    <input type="hidden" value="1" name="layout">
+                    <input type="hidden" value="0" name="eotf">
+                    <input type="hidden" value="https://www.bochum.de" name="u" class="translateUrl">
+                    <input type="hidden" value="de" name="sl">
+                    <input type="submit" value="Übersetzen">
+                  </div>
+                </form>
+              </div>
+              <a href="#top" class="navigation__close button button--circle" aria-label="Menü schließen"><i class="icon icon--system" data-icon="close"></i></a>
+            </div>
+          </div>
+          <div class="accordion accordion--inverted">
+            <article class="accordion__item">
+              <div class="accordion__toggle">
+                <h3>Rathaus <i class="icon icon--system" data-icon="keyboard_arrow_down"></i></h3>
+              </div>
+              <div class="accordion__content">
+                <div class="menu">
+                  <ul>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+            <article class="accordion__item active">
+              <div class="accordion__toggle">
+                <h3>Lebenslagen <i class="icon icon--system" data-icon="keyboard_arrow_down"></i></h3>
+              </div>
+              <div class="accordion__content">
+                <div class="menu">
+                  <ul>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Suche</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Neu in Bochum / Umzug</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Integration / Migration</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Geburt / Kinderbetreuung</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Jugend / Schule</a></li>
+                    <li><a href="#" class="active"><i class="icon icon--system" data-icon="chevron_right"></i> Familie</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Aus- und Weiterbildung / Beruf</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Mobilität</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Bauen und Wohnen</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Gesundheit / Krankheit / Behinderung</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Alter</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Sterbefall</a></li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+            <article class="accordion__item">
+              <div class="accordion__toggle">
+                <h3>Politik <i class="icon icon--system" data-icon="keyboard_arrow_down"></i></h3>
+              </div>
+              <div class="accordion__content">
+                <div class="menu">
+                  <ul>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+            <article class="accordion__item">
+              <div class="accordion__toggle">
+                <h3>Ämter <i class="icon icon--system" data-icon="keyboard_arrow_down"></i></h3>
+              </div>
+              <div class="accordion__content">
+                <div class="menu">
+                  <ul>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+            <article class="accordion__item">
+              <div class="accordion__toggle">
+                <h3>Bürgerbeteiligung und Bürgerinfo <i class="icon icon--system" data-icon="keyboard_arrow_down"></i></h3>
+              </div>
+              <div class="accordion__content">
+                <div class="menu">
+                  <ul>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+            <article class="accordion__item">
+              <div class="accordion__toggle">
+                <h3>Rund um Bochum <i class="icon icon--system" data-icon="keyboard_arrow_down"></i></h3>
+              </div>
+              <div class="accordion__content">
+                <div class="menu">
+                  <ul>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+            <article class="accordion__item">
+              <div class="accordion__toggle">
+                <h3>Bochum-Strategie <i class="icon icon--system" data-icon="keyboard_arrow_down"></i></h3>
+              </div>
+              <div class="accordion__content">
+                <div class="menu">
+                  <ul>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                    <li><a href="#"><i class="icon icon--system" data-icon="chevron_right"></i> Lorem ipsum dolor</a></li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+          <nav class="shortcuts">
+            <ul>
+              <li class="shortcut"><a href="#"><span class="shortcut__icon"><span class="icon icon--custom"><svg><use xlink:href="#icon-callcenter" /></svg></span></span><span class="shortcut__text">Mein Bochum</span></a></li>
+              <li class="shortcut"><a class="active" href="#"><span class="shortcut__icon"><span class="icon icon--custom"><svg><use xlink:href="#icon-datetime" /></svg></span></span><span class="shortcut__text">Terminbuchung</span></a></li>
+              <li class="shortcut"><a href="#"><span class="shortcut__icon"><span class="icon icon--custom"><svg><use xlink:href="#icon-familyhome" /></svg></span></span><span class="shortcut__text">Familienportal</span></a></li>
+              <li class="shortcut"><a href="#"><span class="shortcut__icon"><span class="icon icon--custom"><svg><use xlink:href="#icon-parenting" /></svg></span></span><span class="shortcut__text">Kitaportal</span></a></li>
+              <li class="shortcut"><a href="#"><span class="shortcut__icon"><span class="icon icon--custom"><svg><use xlink:href="#icon-echo" /></svg></span></span><span class="shortcut__text">BürgerEcho</span></a></li>
+              <li class="shortcut"><a href="#"><span class="shortcut__icon"><span class="icon icon--custom"><svg><use xlink:href="#icon-pinboard" /></svg></span></span><span class="shortcut__text">Ratsinformationssystem</span></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </nav>
+    <script src="scripts/dist/vendor.js"></script>
+    <script src="scripts/dist/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+.well {
+    position: relative;
+    background-color: $color-lightgrey;
+    margin-bottom: $spacing * 2;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    @media screen and (min-width: $tablet-landscape-minwidth) {
+        margin-bottom: $spacing * 1.5;
+    }
+    @media screen and (max-width: $desktop-medium-width - 1) {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .inside {
+        padding-top: $spacing;
+        padding-bottom: $spacing;
+        @media screen and (min-width: $tablet-landscape-minwidth) {
+            padding-top: $spacing * 1.5;
+            padding-bottom: $spacing * 1.5;
+        }
+    }
+    .buttongroup {
+        margin-bottom: 0!important;
+    }
+    .well__text {
+        position: relative;
+        z-index: 2;
+        h2 {
+            margin-top: 0;
+        }
+    }
+    .well__background {
+        height: 274px;
+        position: relative;
+        .background {
+            background-color: $color-lightgrey;
+            background-repeat: no-repeat;
+            pointer-events: none;
+            background-size: cover;
+            background-position: top left;
+        }
+    }
+    .well__image {
+        padding: $spacing / 2 $spacing / 2 0 $spacing / 2;
+        box-sizing: border-box;
+        img {
+            width: 100%;
+            height: auto;
+            max-width: 371px;
+            margin-left: auto;
+        }
+    }
+    @media screen and (min-width: $tablet-landscape-minwidth) {
+        margin-bottom: $spacing * 4;
+        padding: $spacing 0;
+        .inside {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .well__text, .well__image {
+            width: 50%;
+        }
+        .well__text {
+            width: 65%;
+            h2 {
+                margin-top: 0;
+            }
+        }
+        .well__image {
+            width: 30%;
+            padding: 0;
+            img {
+                max-width: 100%;
+            }
+        }
+        &.well--background {
+            .well__text {
+                width: 50%;
+                padding-bottom: 0;
+            }
+        }
+        .well__background {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-position: center left;
+            width: 50%;
+            height: 100%;
+            padding-top: 0;
+        }
+    }
+    @media screen and (min-width: $desktop-medium-width) {
+        // 1440px
+        width: 100%!important;
+        box-sizing: border-box;
+        padding: $spacing $spacing * 2;
+        .main__primary--full & {
+            padding: $spacing * 2 $spacing * 4;
+        }
+        .inside {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,64 @@
+.menu {
+    padding-bottom: 2em;
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    li {
+        display: inline-block;
+        width: 100%;
+        a {
+            display: block;
+            color: $color-white;
+            text-decoration: none;
+            padding: 0.5em 0;
+            box-sizing: border-box;
+            text-indent: -10px;
+            margin-left: 16px;
+            transition: color 400ms ease-in-out;
+            .icon {
+                color: $color-cyan;
+            }
+            .no-touch & {
+                &:hover {
+                    color: $color-cyan;
+                }
+            }
+            &:focus{
+                color: $color-cyan;
+            }
+            &.active {
+                color: $color-cyan;
+            }
+        }
+    }
+    @media screen and (min-width: $smartphone-landscape-minwidth) {
+        ul {
+            column-count: 2;
+            column-gap: $spacing;
+        }
+    }
+    @media screen and (min-width: $tablet-landscape-minwidth) {
+        ul {
+            column-count: 3;
+            column-gap: $spacing;
+        }
+    }
+    @media screen and (min-width: $desktop-medium-width) {
+        ul {
+            column-count: 3;
+            column-gap: $spacing;
+            padding-right: $spacing;
+            margin-right: 25%;
+        }
+    }
+    @media screen and (min-width: $desktop-large-width) {
+        ul {
+            column-count: 4;
+            column-gap: $spacing;
+            padding-right: 0;
+            margin-right: 0;
+        }
+    }
+}

@@ -1,0 +1,71 @@
+.abcnavigation {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    .abcnavigation__wrapper {
+        overflow-y: hidden;
+        overflow-x: auto;
+        width: 100%;
+        padding-bottom: 1em;
+        position: relative;
+        &::after {
+            content: '';
+            width: 100%;
+            position: absolute;
+            transform: translateY(-1px);
+            top: 100%;
+            z-index: 999;
+            height: 0.1rem;
+            background-color: $color-grey;
+            @media screen and (-webkit-min-device-pixel-ratio:0) {
+                top: inherit;
+            }
+            @-moz-document url-prefix() { 
+                bottom: -1px;
+            }
+        }
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0!important;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        li {
+            display: block;
+            text-align: center;
+            flex-grow: 1;
+            a, span {
+                @include text-body1;
+                margin: 0!important;
+                display: block;
+                text-decoration: none;
+                color: $color-mediumgrey;
+                padding: 0.125em 0.65em;
+                @media screen and (min-width: $tablet-landscape-minwidth) {
+                    padding: 0.125em 0;
+                }
+                border-bottom: 0.4rem solid $color-white;
+                transition: border-bottom 400ms ease-in-out;
+            }
+            a {
+                .no-touch & {
+                    &:hover {
+                        border-bottom-color: $color-lightcyan;
+                    }
+                }
+                &:focus {
+                    border-bottom-color: $color-lightcyan;
+                }
+            }
+            a, span {
+                &.active {
+                    color: $color-black;
+                    border-bottom-color: $color-cyan;
+                }
+            }
+        }
+    }
+}

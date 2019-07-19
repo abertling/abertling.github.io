@@ -1,0 +1,36 @@
+{
+  "name": "bochum",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "digitise",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "flatpickr": "^4.5.7",
+    "glightbox": "^2.0.1",
+    "innersvg-polyfill": "0.0.2",
+    "intersection-observer": "^0.7.0",
+    "material-design-icons": "^3.0.1",
+    "overlayscrollbars": "^1.7.1",
+    "selecty": "0.0.1",
+    "swiper": "^4.2.2",
+    "vanilla-lazyload": "^12.0.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.4",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-combine-mq": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect-php": "^1.0.3",
+    "gulp-if": "^2.0.2",
+    "gulp-sass": "^4.0.2",
+    "gulp-svg-sprites": "^4.1.2",
+    "gulp-uglify": "^2.0.1",
+    "merge-stream": "^1.0.1"
+  }
+}

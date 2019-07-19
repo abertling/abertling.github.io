@@ -1,0 +1,103 @@
+@media print {
+    body, .os-host-overflow, .os-padding, .os-viewport, .os-content {
+        overflow-y: auto!important;
+        height: auto;
+        display: block;
+        position: relative;
+    }
+    body {
+        overflow-x: visible!important;
+        overflow-y: visible!important;
+    }
+    .os-content-glue, .os-scrollbar, .os-resize-observer-host, .os-size-auto-observer, .os-content-arrange, .os-content::before, .os-content::after {
+        display: none!important;
+    }
+    .header__background, .header__breadcrumb, .header__shortcuts, .header__emergency, .header__search, .header__scrolldown, .header__translate, .header__hamburger, .footer, .navigation, .pagination, .back {
+        display: none!important;
+    }
+    .header__title {
+        color: $color-black!important;
+        h1 {
+            opacity: 1!important;
+            max-height: none!important;
+        }
+    }
+    .header__logo {
+        .header__logo__screen {
+            display: none!important;
+        }
+        .header__logo__print {
+            display: block!important;
+        }
+    }
+    .header__main {
+        background: $color-white!important;
+    }
+    .lazy {
+        background-color: $color-lightgrey;
+    }
+    .background.background--picture, .image .image__container {
+        img:not([src]), img:not([srcset]) {
+            opacity: 1!important;
+        }
+    }
+    .teaser .teaser__collection {
+        .teaser__item {
+            width: 50%;
+            border: 1.2rem solid $color-white;
+        }
+    }
+    .well .well__image, .well .well__background {
+        display: none!important;
+    }
+    .slideshow {
+        .swiper-wrapper {
+            display: flex!important;
+            flex-wrap: wrap!important;
+            transform: translate3d(0,0,0)!important;
+        }
+        .slideshow__item {
+            width: 50%!important;
+            &.swiper-slide-duplicate {
+                display: none!important;
+            }
+            .slideshow__background {
+                position: absolute;
+                left: 0;
+                height: 100%;
+                padding-top: 0;
+                width: 100%;
+                z-index: 1;
+                opacity: 0.2;
+            }
+            .slideshow__content {
+                opacity: 1!important;
+                position: relative;
+            }
+        }
+        .swiper-button-next, .swiper-button-prev {
+            display: none;
+        }
+    }
+    .photos .photos__item {
+        width: 25%!important;
+    }
+    .linkbox {
+        width: 100 / 2 * 1%;
+    }
+    .header .header__main {
+        display: block!important;
+        min-height: 0!important;
+    }
+    .main {
+        display: block!important;
+    }
+    .main__primary {
+        h1, h2, h3, h4, h5, h6 {
+            page-break-after: avoid;
+        }
+        .text {
+            page-break-inside: auto;
+        }
+    }
+}

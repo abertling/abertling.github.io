@@ -1,0 +1,12 @@
+.map {
+    @include spacing--bottom(1);
+    .map__title {
+        margin-bottom: 1em;
+        width: 100% / 864px * 680px;
+        margin-left: auto;
+        margin-right: auto;
+        @media screen and (min-width: $desktop-medium-width) {
+            width: 100% / 1556px * 1080px;
+        }
+    }
+}

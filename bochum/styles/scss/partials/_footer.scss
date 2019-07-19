@@ -1,0 +1,238 @@
+.footer {
+    background-color: $color-blue;
+    .footer__topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: $spacing / 2 0;
+    }
+    .footer__scrollup {
+        order: 2;
+        // width: 16.0rem;
+        position: fixed;
+        bottom: $spacing/2.5;
+        right: $spacing/2.5;
+        z-index: 999999;
+        @media screen and (min-width: $desktop-small-width) {
+            bottom: $spacing;
+            right: $spacing;
+        }
+        padding: 0;
+        opacity: 0;
+        transition: opacity 400ms ease-in-out;
+        .scrolled--up & {
+            opacity: 1;
+        }
+        @media screen and (min-width: $tablet-landscape-minwidth) {
+            order: 3;
+        }
+        a {
+            margin-left: auto;
+            background-color: $color-bordergrey;
+            border: 0.1rem solid $color-bordergrey;
+            border-radius: 50%;
+            display: block;
+            width: 3.6rem;
+            height: 3.6rem;
+            line-height: 3.6rem;
+            text-align: center;
+            transition: all 400ms ease-in-out;
+            @media screen and (min-width: $tablet-portrait-minwidth) {
+                width: 4.8rem;
+                height: 4.8rem;
+                line-height: 4.8rem;
+            }
+            .no-touch & {
+                &:hover {
+                    background-color: $color-lightgrey;
+                }
+            }
+            &:focus {
+                background-color: $color-lightgrey;
+            }
+            &:active {
+                transform: scale(0.9);
+            }
+        }
+        .icon {
+            font-size: 2.6rem;
+            @media screen and (min-width: $tablet-portrait-minwidth) {
+                font-size: 3.8rem;
+            }
+        }
+    }
+    .footer__logo {
+        padding: $spacing / 2 0;
+        flex-shrink: 0;
+        order: 1;
+        img {
+            display: block;
+            width: 16.0rem;
+        }
+    }
+    .footer__social {
+        list-style: none;
+        padding: $spacing / 2 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 100%;
+        order: 3;
+        @media screen and (min-width: $tablet-landscape-minwidth) {
+            width: auto;
+            order: 2;
+        }
+        li {
+            margin: 0 0.5em;
+            a {
+                transition: all 400ms ease-in-out;
+                background-color: $color-white;
+                border-radius: 50%;
+                display: block;
+                width: 4.0rem;
+                height: 4.0rem;
+                line-height: 4.0rem;
+                text-align: center;
+                .icon {
+                    svg {
+                        width: 2.4rem;
+                        height: 2.4rem;
+                        margin-top: 0.8rem;
+                    }
+                }
+                @media screen and (min-width: $tablet-portrait-minwidth) {
+                    width: 4.8rem;
+                    height: 4.8rem;
+                    line-height: 4.8rem;
+                    .icon {
+                        svg {
+                            margin-top: 1.2rem;
+                        }
+                    }
+                }
+                .no-touch & {
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+                &:focus {
+                    opacity: 0.8;
+                }
+            }
+            &.footer__facebook {
+                a {
+                    background-color: #3b5998;
+                }
+            }
+            &.footer__twitter {
+                a {
+                    background-color: #55acee;
+                }
+            }
+            &.footer__youtube {
+                a {
+                    background-color: #cf1f25;
+                }
+            }
+            &.footer__instagram {
+                a {
+                    background-color: $color-white;
+                }
+            }
+            &.footer__facebook {
+                a {
+                    background-color: #3b5998;
+                }
+            }
+            &.footer__facebook {
+                a {
+                    background-color: #3b5998;
+                }
+            }
+        }
+    }
+    .buttongroup {
+        margin-top: 1.5em;
+        margin-bottom: 1.25em;
+        .button {
+            border-color: $color-white;
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+            padding-left: 1em;
+            padding-right: 1em;
+            min-width: 29.2rem;
+            @media screen and (max-width: $tablet-portrait-minwidth - 1) {
+                min-width: 75%;
+            }
+        }
+    }
+    .footer__menu {
+        background-color: $color-lightgrey;
+        .menu {
+            padding: 1em 0;
+            ul {
+                column-count: 2;
+                li {
+                    a {
+                        color: $color-blue;
+                        font-weight: $font-weight-bold;
+                        .icon {
+                            transition: color 400ms ease-in-out;
+                            color: $color-blue;
+                        }
+                        .no-touch & {
+                            &:hover {
+                                color: $color-cyan;
+                                .icon {
+                                    color: $color-cyan;
+                                }
+                            }
+                        }
+                        &:focus {
+                            color: $color-cyan;
+                            .icon {
+                                color: $color-cyan;
+                            }
+                        }
+                        &.active {
+                            color: $color-black;
+                            .icon {
+                                color: $color-black;
+                            }
+                        }
+                        @media screen and (min-width: $tablet-landscape-minwidth) {
+                            padding: 0.0625em 0;
+                        }
+                    }
+                }
+            }
+            @media screen and (min-width: $tablet-portrait-minwidth) {
+                ul {
+                    column-count: 3;
+                }
+            }
+            @media screen and (min-width: $tablet-landscape-minwidth) {
+                padding: $spacing 0;
+                ul {
+                    column-count: 4;
+                }
+            }
+            @media screen and (min-width: $desktop-medium-width) {
+                ul {
+                    column-count: 5;
+                    margin-right: auto;
+                }
+            }
+            @media screen and (min-width: $desktop-large-width) {
+                ul {
+                    column-count: 5;
+                }
+            }
+        }
+    }
+}

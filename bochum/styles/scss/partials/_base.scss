@@ -1,0 +1,101 @@
+html, body {
+    height: 100%;
+}
+  
+body {
+    margin: 0;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    &.no-js {
+      animation: showScrollbarNoJS 1s ease-in-out;
+      animation-fill-mode: forwards;
+    }
+}
+
+.container {
+    overflow: hidden;
+    height: 100%;
+    height: 100vh;
+}
+
+.main {
+  img {
+    display: block;
+    max-width: 100%;
+    height: 100%;
+  }
+}
+
+.main, .footer, .header__breadcrumb {
+  animation: mainFadeIn 600ms ease-in-out;
+}
+
+@media screen and (min-width: $desktop-small-width) {
+  .header__translate, .header__hamburger {
+    animation: mainFadeIn 600ms ease-in-out;
+  }
+}
+
+.background {
+  background-color: $color-blue;
+  transition: opacity 400ms ease-in-out;
+  &:not([style]) {
+    opacity: 0;
+  }
+  &.background--picture {
+    &:not([style]) {
+      opacity: 1;
+    }
+    img:not([src]), img:not([srcset]) {
+      opacity: 0;
+      .no-js & {
+        opacity: 1;
+      }
+    }
+    img:not(.initial) {
+      transition: opacity 400ms ease-in-out;
+    }
+    img.initial,
+    img.loaded,
+    img.error {
+      opacity: 1;
+    }
+  }
+  &, & img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  & img {
+    object-fit: cover;
+  }
+}
+
+figure {
+    margin: 0;
+}
+
+@keyframes showScrollbarNoJS {
+  0% {
+    overflow-y: hidden;
+  }
+  100% {
+    overflow-y: auto;
+  }
+}
+
+@keyframes mainFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

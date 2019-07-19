@@ -1,0 +1,110 @@
+.linklist {
+    .linklist__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        @include spacing--bottom(0.5);
+        &:last-child {
+            @include spacing--bottom(2);
+        }
+        li {
+            a {
+                display: block;
+                box-sizing: border-box;
+                margin: 0!important;
+                text-decoration: none;
+                color: $color-black;
+                padding: 1.25em 0.5em 1.25em 0.5em;
+                border-bottom: 1px solid $color-yellow;
+                background-color: $color-transparent;
+                transition: background-color 400ms ease-in-out;
+                .textimage {
+                    margin: 0!important;
+                    @media screen and (min-width: $tablet-landscape-minwidth) {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: nowrap;
+                        width: 100%;
+                    }
+                    .textimage__text {
+                        font-weight: $font-weight-regular;
+                        @media screen and (min-width: $tablet-landscape-minwidth) {
+                            margin-right: auto;
+                        }
+                    }
+                    .textimage__image {
+                        margin-top: 0.25em;
+                        @media screen and (min-width: $tablet-landscape-minwidth) {
+                            width: 13.4rem;
+                            margin-left: 1em;
+                            margin-right: 1.25em;
+                            margin-top: 0;
+                        }
+                        flex-shrink: 0;
+                        .image {
+                            margin: 0!important;
+                        }
+                    }
+                }
+                .linklist__toggle {
+                    @include h3;
+                    margin: 0!important;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    align-items: flex-start;
+                }
+                h3 {
+                    margin: 0!important;
+                }
+                p {
+                    @include text-body1;
+                    padding-top: 0.25em;
+                    margin: 0!important;
+                }
+                .icon {
+                    margin-left: auto;
+                    color: $color-cyan;
+                    transition: color 400ms ease-in-out;
+                }
+                .no-touch & {
+                    &:hover {
+                        background-color: $color-lightgrey;
+                        .icon {
+                            color: $color-blue;
+                        }
+                    }
+                }
+                &:focus {
+                    background-color: $color-lightgrey;
+                    .icon {
+                        color: $color-blue;
+                    }
+                }
+            }
+        }
+    }
+    &.linklist--small {
+        .linklist__list {
+            li {
+                a {
+                    padding: 0.700em 0.5em;
+                    .linklist__toggle {
+                        @include h5;
+                        margin: 0!important;
+                    }
+                    .icon {
+                        font-size: 1.25em;
+                    }
+                }
+            }
+        }
+    }
+    & + .pagination {
+        @include spacing--top(-1);
+    }
+    & + .address {
+        @include spacing--top(-1);
+    }
+}

@@ -1,0 +1,33 @@
+.address {
+    @include spacing--bottom(1);
+    .address__box {
+        background-color: $color-lightgrey;
+        border: 1px solid $color-grey;
+        border-radius: 0.4rem;
+        .address__location, .address__openinghours, .address__info {
+            box-sizing: border-box;
+            padding: 0 2em;
+        }
+        .address__location {
+            border-bottom: 1px solid $color-grey;
+        }
+        .address__info {
+            width: 100%;
+        }
+        @media screen and (min-width: $desktop-small-width) {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            flex-direction: row;
+            .address__location, .address__openinghours {
+                box-sizing: border-box;
+                width: 50%;
+                padding: 0 2em;
+            }
+            .address__location {
+                border-bottom: 0;
+                border-right: 1px solid $color-grey;
+            }
+        }
+    }
+}

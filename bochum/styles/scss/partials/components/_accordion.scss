@@ -1,0 +1,138 @@
+.accordion {
+    @include spacing--bottom(2);
+    .main & {
+        @include spacing--top(1);
+        & + .linklist {
+            @include spacing--top(-1);
+        }
+    }
+    .accordion__item {
+        border-bottom: 1px solid $color-cyan;
+        transition: border-color 400ms ease-in-out;
+        .accordion__toggle {
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            background-color: $color-transparent;
+            transition: background-color 400ms ease-in-out;
+            h3 {
+                @include h4;
+                margin: 0 !important;
+                padding: 1em 0.8rem;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                align-items: flex-start;
+                @media screen and (min-width: $desktop-large-width) {
+                    font-size: 2.8rem;
+                    line-height: 1.214em;
+                }
+                .icon {
+                    user-select: none;
+                    font-size: 2em;
+                    color: $color-blue;
+                    transition: all 400ms ease-in-out;
+                    .no-js & {
+                        opacity: 0;
+                    }
+                }
+            }
+            .no-touch & {
+                &:hover {
+                    background-color: $color-lightgrey;
+                }
+            }
+            &:focus {
+                background-color: $color-lightgrey;
+            }
+        }
+        .no-touch & {
+            &:hover {
+                border-bottom-color: $color-cyan;
+            }
+        }
+        .accordion__content {
+            padding-left: 0.8rem;
+            padding-right: 0.8rem;
+            transition: all 400ms ease-in-out;
+            @media screen and (min-width: $tablet-portrait-minwidth) {
+                .text, .address, .map__title, .linklist, .textimage {
+                    padding: 0 4.556em;
+                }
+                .text {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &.closed {
+            border-bottom-color: $color-yellow;
+            .accordion__toggle {
+                .icon {
+                    transform: rotate(0);
+                    color: $color-cyan;
+                }
+            }
+            .accordion__content {
+                @media screen {
+                    opacity: 0;
+                    max-height: 0;
+                    overflow: hidden;
+                }
+            }
+        }
+        &.open, &:not(.closed) {
+            border-bottom-color: $color-cyan;
+            .accordion__toggle {
+                .no-touch & {
+                    &:hover {
+                        background-color: $color-white;
+                    }
+                }
+                &:focus {
+                    background-color: $color-white;
+                }
+                .icon {
+                    transform: rotate(180deg);
+                    color: $color-blue;
+                }
+            }
+            .accordion__content {
+                opacity: 1;
+                max-height: 1000px;
+                overflow: hidden;
+                transition: opacity 400ms 300ms ease-in-out, max-height 400ms ease-in-out;
+            }
+        }
+    }
+    &.accordion--inverted {
+        .accordion__item {
+            border-bottom-color: $color-cyan;
+            .accordion__toggle {
+                @media screen and (min-width: $desktop-medium-width) {
+                    h3 {
+                        @include h3
+                    }
+                }
+                .icon {
+                    color: $color-white;
+                }
+                .no-touch & {
+                    &:hover {
+                        background-color: rgba(255, 255, 255, 0.06);
+                    }
+                }
+                &:focus {
+                    background-color: rgba(255, 255, 255, 0.06);
+                }
+            }
+            &.open, &:not(.closed) {
+                .accordion__toggle {
+                    .icon {
+                        color: $color-cyan;
+                    }
+                }
+            }
+        }
+    }
+}

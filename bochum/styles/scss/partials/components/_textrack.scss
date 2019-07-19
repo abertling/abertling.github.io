@@ -1,0 +1,9 @@
+.textrack {
+    border-radius: 0.4rem;
+    border: 0.1rem solid $color-cyan;
+    padding: $spacing;
+    @include spacing--bottom(1);
+    p:last-child {
+        margin-bottom: 0;
+    }
+}

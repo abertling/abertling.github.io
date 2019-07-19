@@ -1,0 +1,61 @@
+// define base colors
+$color-white: #fff;
+$color-black: #000;
+// $color-grey: #666;
+
+$color-grey: #c8c8c8;
+$color-lightgrey: #f0f0f0;
+$color-darkgrey: #474747;
+$color-mediumgrey: #827f81;
+$color-bordergrey: #e0e0e0;
+$color-lightblue: #1a43a2;
+$color-blue: #0f2864;
+$color-blue-border: #0a86bd;
+$color-cyan: #0ab4ff;
+$color-lightcyan: #c2ecff;
+$color-disabledgrey: #adadad;
+
+$color-blue-link: #002d9a;
+
+$color-blue-gradient: linear-gradient(to left, $color-lightblue 0%, $color-blue 100%);
+
+$color-image-gradient: linear-gradient(to bottom, rgba($color-blue, 0.5), rgba($color-blue, 0.2) 20%, rgba($color-blue, 0.1) 50%, rgba($color-blue, 0.2) 66%, $color-blue);
+
+// $color-cyangrey: #e4f0f2;
+$color-emergency: #a50020;
+$color-emergencyborder: #7a0012;
+
+$color-confirmation: #508200;
+
+$color-red: #e61937;
+$color-pink: #e5006d;
+$color-purple: #94559c;
+$color-turquoise: #17af8d;
+$color-green: #76b729;
+$color-yellow: #ffcc01;
+$color-orange: #f49100;
+
+// $color-darkgrey: #333333;
+// $color-mediumgrey: #646464;
+// $color-lightgrey: #aeaeae;
+// $color-lightergrey: #f2f2f2;
+
+$color-transparent: rgba($color-white, 0);
+
+// Headline color (H1, H2, byline)
+$color-headline: $color-black;
+
+// Text color (Paragraphs)
+$color-text: $color-black;
+
+// Primary color (Navbar, Surfaces)
+$color-primary: $color-cyan;
+
+// Secondary color (Buttons, Links)
+$color-secondary: $color-cyan;
+
+// Tertiary color (Datelist)
+$color-tertiary: $color-yellow;
+
+// Call-To-Action color (Newsletter, Contact teaser)
+$color-cta: $color-blue;

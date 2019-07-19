@@ -1,0 +1,791 @@
+@font-face {
+    font-family: 'Locator';
+    src: url('../fonts/LocatorWebRegular.eot'),
+        url('../fonts/LocatorWebRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Locator';
+    src: url('../fonts/LocatorWebBold2.eot'),
+        url('../fonts/LocatorWebBold2.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'),
+        local('MaterialIcons-Regular'),
+        url(../fonts/MaterialIcons-Regular.woff2) format('woff2'),
+        url(../fonts/MaterialIcons-Regular.woff) format('woff'),
+        url(../fonts/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+html {
+    font-size: 62.5%;
+}
+  
+body {
+    font-size: $font-size-base;
+    font-family: $font-family;
+    font-weight: $font-weight-regular;
+    line-height: $line-height-normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $color-text;
+}
+
+@mixin h1 {
+    font-weight: $font-weight-bold;
+    font-size: 3.6rem;
+    line-height: 1.222em;
+    margin: 0 0 0.444em 0;
+    @media screen and (min-width: $tablet-portrait-minwidth) {
+        font-size: 4.8rem;
+        line-height: 1.167em;
+        margin: 0 0 0.333em 0;
+    }
+    @media screen and (min-width: $desktop-small-width) {
+        font-size: 6.0rem;
+        line-height: 1.133em;
+        margin: 0 0 0.400em 0;
+    }
+}
+
+@mixin h2 {
+    font-weight: $font-weight-bold;
+    font-size: 3.0rem;
+    line-height: 1.267em;
+    margin: 1.267em 0 0.267em 0;
+    @media screen and (min-width: $tablet-portrait-minwidth) {
+        font-size: 4.0rem;
+        line-height: 1.200em;
+        margin: 1.200em 0 0.300em 0;
+    }
+    @media screen and (min-width: $desktop-small-width) {
+        font-size: 4.8rem;
+        line-height: 1.167em;
+        margin: 1.167em 0 0.333em 0;
+    }
+}
+
+@mixin h3 {
+    font-weight: $font-weight-bold;
+    font-size: 2.4rem;
+    line-height: 1.167em;
+    margin: 1.167em 0 0.333em 0;
+    @media screen and (min-width: $tablet-portrait-minwidth) {
+        font-size: 2.6rem;
+        line-height: 1.231em;
+        margin: 1.231em 0 0.308em 0;
+    }
+    @media screen and (min-width: $desktop-small-width) {
+        font-size: 2.8rem;
+        line-height: 1.214em;
+        margin: 1.214em 0 0.286em 0;
+    }
+}
+
+@mixin h4 {
+    font-weight: $font-weight-bold;
+    font-size: 2.0rem;
+    line-height: 1.300em;
+    margin: 1.300em 0 0.400em 0;
+    @media screen and (min-width: $tablet-portrait-minwidth) {
+        font-size: 2.2rem;
+        line-height: 1.273em;
+        margin: 1.273em 0 0.364em 0;
+    }
+    @media screen and (min-width: $desktop-small-width) {
+        font-size: 2.4rem;
+        line-height: 1.333em;
+        margin: 1.333em 0 0.333em 0;
+    }
+}
+
+@mixin h5 {
+    font-weight: $font-weight-bold;
+    font-size: 1.6rem;
+    line-height: 1.500em;
+    margin: 1.500em 0 0.500em 0;
+    @media screen and (min-width: $tablet-portrait-minwidth) {
+        font-size: 1.8rem;
+        line-height: 1.444em;
+        margin: 1.444em 0 0.444em 0;
+    }
+    @media screen and (min-width: $desktop-small-width) {
+        font-size: 2.0rem;
+        line-height: 1.400em;
+        margin: 1.400em 0 0.400em 0;
+    }
+}
+
+@mixin h6 {
+    font-weight: $font-weight-bold;
+    font-size: 1.4rem;
+    line-height: 1.429em;
+    margin: 1.429em 0 0.571em 0;
+    @media screen and (min-width: $tablet-portrait-minwidth) {
+        font-size: 1.6rem;
+        line-height: 1.500em;
+        margin: 1.500em 0 0.500em 0;
+    }
+    @media screen and (min-width: $desktop-small-width) {
+        font-size: 1.8rem;
+        line-height: 1.444em;
+        margin: 1.444em 0 0.444em 0;
+    }
+}
+
+@mixin text-intro1 {
+    font-size: 2.2rem;
+    line-height: 1.273em;
+    margin: 0 0 1.273em 0;
+    @media screen and (min-width: $tablet-portrait-minwidth) {
+        font-size: 2.6rem;
+        line-height: 1.308em;
+        margin: 0 0 1.308em 0;
+    }
+    @media screen and (min-width: $desktop-small-width) {
+        font-size: 3.2rem;
+        line-height: 1.250em;
+        margin: 0 0 1.250em 0;
+    }
+}
+
+@mixin text-intro2 {
+    font-size: 1.8rem;
+    line-height: 1.444em;
+    margin: 0 0 1.444em 0;
+    @media screen and (min-width: $tablet-portrait-minwidth) {
+        font-size: 2.0rem;
+        line-height: 1.400em;
+        margin: 0 0 1.400em 0;
+    }
+    @media screen and (min-width: $desktop-small-width) {
+        font-size: 2.4rem;
+        line-height: 1.333em;
+        margin: 0 0 1.333em 0;
+    }
+}
+
+@mixin text-body1 {
+    font-size: 1.6rem;
+    line-height: 1.500em;
+    margin: 0 0 1.500em 0;
+    @media screen and (min-width: $tablet-portrait-minwidth) {
+        font-size: 1.8rem;
+        line-height: 1.444em;
+        margin: 0 0 1.444em 0;
+    }
+    @media screen and (min-width: $desktop-small-width) {
+        font-size: 2.0rem;
+        line-height: 1.400em;
+        margin: 0 0 1.400em 0;
+    }
+}
+
+@mixin text-body2 {
+    font-size: 1.4rem;
+    line-height: 1.429em;
+    margin: 0 0 1.429em 0;
+    @media screen and (min-width: $tablet-portrait-minwidth) {
+        font-size: 1.6rem;
+        line-height: 1.500em;
+        margin: 0 0 1.500em 0;
+    }
+    @media screen and (min-width: $desktop-small-width) {
+        font-size: 1.8rem;
+        line-height: 1.444em;
+        margin: 0 0 1.444em 0;
+    }
+}
+
+@mixin text-link {
+    font-size: 1.4rem;
+    line-height: 1.286em;
+    @media screen and (min-width: $tablet-portrait-minwidth) {
+        font-size: 1.6rem;
+        line-height: 1.250em;
+    }
+    @media screen and (min-width: $desktop-small-width) {
+        font-size: 1.8rem;
+        line-height: 1.333em;
+    }
+}
+
+@mixin text-caption {
+    font-size: 1.2rem;
+    line-height: 1.333em;
+    margin: 0 0 1.333em 0;
+    @media screen and (min-width: $tablet-portrait-minwidth) {
+        font-size: 1.4rem;
+        line-height: 1.429em;
+        margin: 0 0 1.429em 0;
+    }
+    @media screen and (min-width: $desktop-small-width) {
+        font-size: 1.4rem;
+        line-height: 1.429em;
+        margin: 0 0 1.429em 0;
+    }
+}
+
+h1 {
+    @include h1;
+}
+
+h2 {
+    @include h2;
+    &.line {
+        &::after {
+            content: '';
+            display: block;
+            width: 9.0rem;
+            height: 0;
+            margin-top: 0.125em;
+            margin-bottom: 0;
+            border-style: solid;
+            border-width: 6px 6px 6px 0;
+            border-color: transparent transparent $color-cyan transparent;
+            animation: scalingLine 400ms ease-in-out;
+            transform-origin: 0 50%;
+            animation-fill-mode: forwards;
+        }
+        & + p {
+            margin-top: 0!important;
+        }
+    }
+}
+
+h3 {
+    @include h3;
+    &.line {
+        &::after {
+            content: '';
+            display: block;
+            width: 9.0rem;
+            height: 0;
+            margin-top: 0.125em;
+            margin-bottom: 0;
+            border-style: solid;
+            border-width: 6px 6px 6px 0;
+            border-color: transparent transparent $color-cyan transparent;
+            animation: scalingLine 400ms ease-in-out;
+            transform-origin: 0 50%;
+            animation-fill-mode: forwards;
+        }
+        & + p {
+            margin-top: 0!important;
+        }
+    }
+}
+
+h4 {
+    @include h4;
+}
+
+h5 {
+    @include h5;
+    & + .byline {
+        display: block;
+        margin-top: -0.500em;
+        @media screen and (min-width: $tablet-portrait-minwidth) {
+            margin-top: -0.444em;
+        }
+        @media screen and (min-width: $desktop-small-width) {
+            margin-top: -0.400em;
+        }
+    }
+}
+
+h6 {
+    @include h6;
+}
+
+.byline {
+    @include text-body1;
+    display: block;
+}
+
+p {
+    @include text-body1;
+    a {
+        .text &, .address &, .textimage & {
+            text-decoration: none;
+            border-bottom: 0.1rem solid $color-yellow;
+            hyphens: auto;
+            transition: border 400ms ease-in-out;
+            .no-touch & {
+                &:hover {
+                    border-bottom-color: $color-cyan;
+                }
+            }
+            &:focus {
+                border-bottom-color: $color-cyan;
+            }
+        }
+    }
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0 0 0 1.5em;
+    .text & {
+        @include text-body1;
+    }
+}
+
+.topline {
+    @include text-caption;
+    & + h5 {
+        margin-top: 0;
+    }
+}
+
+a, button {
+    font: inherit;
+    @include text-link;
+    color: $color-blue-link;
+}
+
+a, button, span {
+    &.button {
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        text-decoration: none;
+        box-sizing: border-box;
+        background-color: $color-blue;
+        color: $color-white;
+        transition: all 400ms ease-in-out;
+        font-weight: $font-weight-bold;
+        border: 0.2rem solid $color-blue;
+        border-radius: 1.429em;
+        padding: 0.714em 3.786em;
+        margin-bottom: 1.778em;
+        outline: 0;
+        vertical-align: top;
+        cursor: pointer;
+        .icon {
+            vertical-align: middle;
+            color: $color-cyan;
+            transition: color 400ms ease-in-out;
+        }
+        .no-touch & {
+            &:hover {
+                border-color: $color-cyan;
+                background-color: $color-cyan;
+                color: $color-blue;
+                box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+                .icon {
+                    color: $color-blue;
+                }
+            }
+        }
+        &:focus {
+            border-color: rgba($color-blue, 0.8);
+            background-color: rgba($color-blue, 0.8);
+            color: $color-white;
+        }
+        &:active {
+            box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+        }
+        &:disabled {
+            cursor: not-allowed;
+            background-color: $color-grey!important;
+            border-color: $color-grey!important;
+            color: $color-white!important;
+            box-shadow: none!important;
+            .icon {
+                color: $color-white!important;
+            }
+        }
+        &.button--outline {
+            background-color: $color-white;
+            color: $color-blue;
+            .no-touch & {
+                &:hover {
+                    background-color: $color-lightgrey;
+                    color: $color-blue;
+                    .icon {
+                        color: $color-cyan;
+                    }
+                }
+            }
+            &:focus {
+                background-color: $color-lightgrey;
+            }
+            &:disabled {
+                background-color: $color-white!important;
+                color: $color-disabledgrey!important;
+                .icon {
+                    color: $color-disabledgrey!important;
+                }
+            }
+        }
+        @media screen and (min-width: $tablet-portrait-minwidth) {
+            border-radius: 1.375em;
+            padding: 0.688em 3.500em;
+        }
+        @media screen and (min-width: $desktop-small-width) {
+            border-radius: 1.444em;
+            padding: 0.722em 3.556em;
+        }
+    }
+    &.button--circle {
+        padding: 0 !important;
+        border-radius: 50% !important;
+        width: 5.0rem;
+        height: 5.0rem;
+        text-align: center;
+        overflow: hidden;
+        .icon {
+            font-size: 1.5em;
+            line-height: 4.6rem;
+            vertical-align: middle;
+        }
+    }
+    &.more, &.back {
+        display: inline-block;
+        border-bottom: 1px solid $color-yellow;
+        transition: all 400ms ease-in-out;
+        text-decoration: none;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        .icon {
+            transition: color 400ms ease-in-out;
+        }
+        .no-touch & {
+            &:hover {
+                border-color: $color-cyan;
+                .icon {
+                    color: $color-cyan;
+                }
+            }
+        }
+        &:focus {
+            border-color: $color-cyan;
+        }
+        &:active {
+            transform: scale(0.9);
+            border-color: $color-cyan;
+        }
+    }
+    &.more {
+        max-width: 80%;
+    }
+}
+
+.buttongroup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .main & {
+        @include spacing--bottom(2);
+    }
+    &.buttongroup--left {
+        text-align: left;
+        justify-content: flex-start;
+        .button, .more {
+            margin-right: 1em;
+            margin-bottom: 1em;
+        }
+    }
+    &.buttongroup--center {
+        text-align: center;
+        justify-content: center;
+        .button, .more {
+            margin-left: 0.5em;
+            margin-right: 0.5em;
+            margin-bottom: 1em;
+        }
+    }
+    &.buttongroup--right {
+        text-align: right;
+        justify-content: flex-end;
+        .button, .more {
+            margin-left: 1em;
+            margin-bottom: 1em;
+        }
+    }
+}
+
+.divider {
+    @include spacing--top(1);
+    @include spacing--bottom(0.5);
+    width: 100%;
+    height: 0.1rem;
+    border: 0;
+    background-color: $color-yellow;
+}
+
+.table {
+    @include spacing--bottom(1);
+    td, th {
+        background-color: $color-white;
+        text-align: left;
+        padding: 0.8rem;
+        border-bottom: 0.1rem solid $color-grey;
+        vertical-align: top;
+        p:last-child {
+            margin-bottom: 0!important;
+        }
+        @media screen and (min-width: $tablet-portrait-minwidth) {
+            padding: 1.6rem 0.8rem;
+            &:first-child {
+                white-space: nowrap;
+                padding-right: 3.2rem;
+            }
+        }
+    }
+    th {
+        background-color: $color-lightgrey;
+    }
+    &.table--plain {
+        td, th {
+            background-color: $color-white!important;
+        }
+    }
+    &.table--right {
+        td, th {
+            text-align: right;
+            &:first-child {
+                text-align: left;
+            }
+        }
+    }
+    h4 {
+        border-bottom: 0.4rem solid $color-yellow;
+        padding-bottom: 0.125em;
+        margin-bottom: 0!important;
+        & + p {
+            @include text-caption;
+            padding-top: 0.8rem;
+        }
+    }
+    table {
+        @include text-body1;
+        min-width: 100%;
+        table-layout: fixed;
+        border: 0;
+        border-collapse: collapse;
+        margin-bottom: 0!important;
+    }
+    .table__wrapper {
+        width: 100%;
+        overflow-y: hidden;
+        overflow-x: auto;
+        &:first-child {
+            border-top: 0.4rem solid $color-yellow;
+        }
+        & + p {
+            @include text-caption;
+            padding-top: 0.8rem;
+            text-align: right;
+        }
+    }
+    &.table--columns {
+        &.table--scrolled {
+            .table__wrapper {
+                box-sizing: border-box;
+                margin-right: 1em;
+            }
+            td, th {
+                &:first-child {
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 100%;
+                        background-image: linear-gradient(to left, rgba(51, 51, 51, 0), rgba(51, 51, 51, 0.1));
+                        height: 100%;
+                        width: 0.8rem;
+                        pointer-events: none;
+                    }
+                }
+            }
+        }
+        .table__wrapper {
+        }
+        .os-viewport {
+            overscroll-behavior-y: contain;
+        }
+        .os-content {
+        }
+        table {
+        }
+        // transform: translate3d(0px,0px,0px);
+        td, th {
+            &:first-child {
+                position: -webkit-sticky;
+                position: sticky;
+                left: 0;
+            }
+        }
+        td {
+            &:nth-child(even) {
+                background-color: $color-lightgrey;
+            }
+        }
+        th {
+            &:nth-child(even) {
+                background-color: $color-bordergrey;
+            }
+        }
+    }
+}
+
+.sitemap {
+    @include spacing--bottom(1);
+    &:last-child {
+        @include spacing--bottom(2);
+    }
+    padding-bottom: 2em;
+    border-bottom: 0.1rem solid $color-yellow;
+    ul {
+        display: block;
+        list-style: none;
+        padding: 0 0 0 1.5em;
+        margin: 0!important;
+        li {
+            margin: 1em 0;
+        }
+    }
+    & > ul {
+        padding-left: 0;
+        & > li {
+            & > a {
+                font-weight: $font-weight-bold;
+                font-size: 1.2em;
+            }
+        }
+    }
+}
+
+.contact {
+    font-weight: $font-weight-bold;
+    .icon {
+        color: $color-blue;
+        margin-right: 0.5em;
+        font-size: 2.4rem;
+        line-height: 1;
+        & + a {
+            display: inline-block;
+            vertical-align: text-bottom;
+        }
+    }
+    a {
+        font-weight: $font-weight-regular;
+    }
+}
+
+.icon {
+    transform: scale(0);
+    opacity: 0;
+    animation: fadeIcons 400ms ease-in-out;
+    animation-delay: 200ms;
+    animation-fill-mode: forwards;
+    &.icon--system {
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        font-size: inherit;
+        display: inline-block;
+        line-height: inherit;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
+        vertical-align: text-bottom;
+
+        /* Support for all WebKit browsers. */
+        -webkit-font-smoothing: antialiased;
+        /* Support for Safari and Chrome. */
+        text-rendering: optimizeLegibility;
+
+        /* Support for Firefox. */
+        -moz-osx-font-smoothing: grayscale;
+
+        /* Support for IE. */
+        font-feature-settings: 'liga';
+
+        /* Set icon name through data attribute */
+        &::before {
+            content: attr(data-icon);
+        }
+    }
+    &.icon--custom {
+        display: inline-block;
+        svg {
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+    }
+    &.icon--rotate45 {
+        margin-right: 0.2em;
+        padding-right: 0.2em;
+        transform: rotate(-45deg);
+        transform-origin: top center;
+    }
+}
+
+.sr-only {
+    display: none;
+}
+
+/* Ripple Effect */
+
+.ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple__circle {
+    width: 2px;
+    height: 2px;
+    position: absolute;
+    z-index: 88;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    animation: rippleEffect 0.5s ease-in-out;
+	pointer-events: none !important;
+}
+  
+@keyframes rippleEffect {
+    0% {
+        transform: scale(1);
+    } 
+    100% {
+        opacity: 0;
+        transform: scale(var(--scale));
+    }
+}
+
+@keyframes scalingLine {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes fadeIcons {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

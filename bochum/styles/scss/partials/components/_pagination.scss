@@ -1,0 +1,90 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    @include spacing--top(1);
+    @include spacing--bottom(2);
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        border-bottom: 0.1rem solid $color-grey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        li {
+            margin-bottom: -0.1rem;
+            a, span {
+                @include text-body1;
+                margin: 0!important;
+                display: inline-block;
+                text-decoration: none;
+                color: $color-black;
+                text-align: center;
+                padding: 0 0.8em;
+                border-bottom: 0.4rem solid $color-transparent;
+                transition: all 600ms ease-in-out;
+                &.active {
+                    border-bottom-color: $color-cyan!important;
+                }
+            }
+            span {
+                cursor: default;
+            }
+            a {
+                cursor: pointer;
+                .no-touch & {
+                    &:hover {
+                        background-color: $color-lightgrey;
+                        border-bottom-color: $color-grey;
+                    }
+                }
+                &:focus {
+                    background-color: $color-lightgrey;
+                    border-bottom-color: $color-grey;
+                }
+            }
+        }
+    }
+    .pagination__prev, .pagination__next {
+        .icon {
+            font-size: 4.8rem;
+            color: $color-cyan;
+            margin-bottom: -0.2rem;
+            line-height: 1;
+            transition: all 400ms ease-in-out;
+        }
+        &.inactive {
+            .icon {
+                color: $color-grey!important;
+            }
+        }
+        .no-touch & {
+            &:hover {
+                .icon {
+                    color: $color-blue;
+                }
+            }
+        }
+        &:focus {
+            .icon {
+                color: $color-blue;
+            }
+        }
+        &:active {
+            .icon {
+                transform: scale(0.9);
+            }
+        }
+    }
+    .pagination__prev {
+        margin-right: 1.25em;
+    }
+    .pagination__next {
+        margin-left: 1.25em;
+    }
+}

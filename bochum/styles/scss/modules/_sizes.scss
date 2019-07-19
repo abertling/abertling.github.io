@@ -1,0 +1,15 @@
+$spacing: 2.5em;
+
+@mixin spacing--top($factor) {
+    margin-top: $spacing * $factor;
+    @media screen and (min-width: $desktop-small-width) {
+        margin-top: $spacing * 2 * $factor;
+    }
+}
+
+@mixin spacing--bottom($factor) {
+    margin-bottom: $spacing * $factor;
+    @media screen and (min-width: $desktop-small-width) {
+        margin-bottom: $spacing * 2 * $factor;
+    }
+}
