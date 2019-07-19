@@ -1,1 +1,1 @@
-var ajax=new XMLHttpRequest;ajax.open("GET","/styles/images/sprite.svg",!0),ajax.send(),ajax.onload=function(e){var a=document.createElement("div");a.innerHTML=ajax.responseText,document.body.insertBefore(a,document.body.childNodes[0])};
+var ajax=new XMLHttpRequest;ajax.open("GET","styles/images/sprite.svg",!0),ajax.send(),ajax.onload=function(e){var a=document.createElement("div");a.innerHTML=ajax.responseText,document.body.insertBefore(a,document.body.childNodes[0])};
